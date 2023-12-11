@@ -22,7 +22,7 @@ void NewMatrix(string[] arr, int size, int lengthNewArray)
 }
 
 
-int LengthOfNewArray(string[] arr, int size)
+int LengthOfNewMatrix(string[] arr, int size)
 {
     int lenghtNew = 0;
 
@@ -56,7 +56,7 @@ void PrintArray(string[] arr)
     }
     System.Console.Write("]");
 }
-string[] GetNewArray(int size)
+string[] GetArray(int size)
 {
     string[] array = new string[size];
 
@@ -73,8 +73,8 @@ string[] GetNewArray(int size)
 int rightLenght = 3;
 Console.WriteLine("Введите длину первоначального массива");
 int sizeArr = Convert.ToInt32(Console.ReadLine());
-string[] startArray = GetNewArray(sizeArr);
-int newSize = LengthOfNewArray(startArray, rightLenght);
+string[] startArray = GetArray(sizeArr);
+int newSize = LengthOfNewMatrix(startArray, rightLenght);
 PrintArray(startArray);
 Console.Write("-->");
 NewMatrix(startArray, rightLenght, newSize);
