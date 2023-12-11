@@ -1,7 +1,7 @@
 ﻿
 
 
-void NewMatrix(string[] arr, int size,int lengthNewArray)
+void NewMatrix(string[] arr, int size, int lengthNewArray)
 {
     string[] newArray = new string[lengthNewArray];
     int indexNewArray = 0;
@@ -22,7 +22,7 @@ void NewMatrix(string[] arr, int size,int lengthNewArray)
 }
 
 
-int LengthOfNewArray(string[] arr,int size)
+int LengthOfNewArray(string[] arr, int size)
 {
     int lenghtNew = 0;
 
@@ -56,13 +56,25 @@ void PrintArray(string[] arr)
     }
     System.Console.Write("]");
 }
+string[] GetNewArray(int size)
+{
+    string[] array = new string[size];
 
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = Convert.ToString(Console.ReadLine());
+        Console.WriteLine(array[i]);
+
+    }
+
+    return array;
+}
 
 int rightLenght = 3;
-Console.WriteLine("Введите длину первичного массива");
+Console.WriteLine("Введите длину первоначального массива");
 int sizeArr = Convert.ToInt32(Console.ReadLine());
-string[] startArray ={"Hello","sun","paradox","---","67"};
-int newSize = LengthOfNewArray(startArray,rightLenght);
+string[] startArray = GetNewArray(sizeArr);
+int newSize = LengthOfNewArray(startArray, rightLenght);
 PrintArray(startArray);
 Console.Write("-->");
-NewMatrix(startArray, rightLenght,newSize);
+NewMatrix(startArray, rightLenght, newSize);
